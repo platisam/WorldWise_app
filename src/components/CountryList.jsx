@@ -1,6 +1,6 @@
 import Spinner from "./Spinner";
 import styles from "./CountryList.module.css";
-import CityItem from "./CityItem";
+import CountryItem from "./CountryItem";
 import Message from "./Message";
 
 const CountryList = ({ cities, isLoading }) => {
@@ -11,10 +11,12 @@ const CountryList = ({ cities, isLoading }) => {
       <Message message="Add your first city by clicking on a city on the map" />
     );
 
+  const countries = [];
+
   return (
     <ul className={styles.countryList}>
-      {cities.map((city) => (
-        <CityItem city={city} key={city.id} />
+      {countries.map((country) => (
+        <CountryItem country={country} />
       ))}
     </ul>
   );
