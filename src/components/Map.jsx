@@ -1,5 +1,6 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useState } from "react";
+import { useCities } from "../contexts/CitiesContext";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
@@ -7,6 +8,8 @@ import styles from "./Map.module.css";
 
 const Map = () => {
   const navigate = useNavigate();
+  const { cities } = useCities();
+
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -19,7 +22,7 @@ const Map = () => {
       <MapContainer
         center={mapPosition}
         zoom={13}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
         className={styles.map}
       >
         <TileLayer
