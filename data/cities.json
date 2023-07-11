@@ -37,16 +37,40 @@
       "id": 98443197
     },
     {
-      "cityName": "Gasteiz / Vitoria",
+      "cityName": "Fresno-Alhandiga",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2023-07-11T21:53:15.222Z",
-      "notes": "",
+      "date": "2023-07-11T23:44:21.292Z",
+      "notes": "TEST",
       "position": {
-        "lat": "42.77674594319562",
-        "lng": "-2.655306318924773"
+        "lat": "40.711804084833304",
+        "lng": "-5.603027343750001"
       },
       "id": 98443198
+    },
+    {
+      "cityName": "Trasmiras",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-07-11T23:44:39.396Z",
+      "notes": "",
+      "position": {
+        "lat": "42.01416016022771",
+        "lng": "-7.646484375000001"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Zaragoza",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-07-11T23:54:24.362Z",
+      "notes": "",
+      "position": {
+        "lat": "41.68589092930239",
+        "lng": "-0.8829072052479071"
+      },
+      "id": 98443200
     }
   ]
 }
