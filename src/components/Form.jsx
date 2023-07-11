@@ -30,15 +30,17 @@ function Form() {
     async function fetchCityData() {
       try {
         setIsLoadingGeocoding(true);
-        const res = await fetch(`${BASE_URL}?latitude=${lat}longitude=${lng}`);
+        const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`);
         const data = await res.json();
-        setCityName(data);
+        setCityName(data.city || data.locality || "");
+        setCountry(data.countryName);
       } catch (error) {
       } finally {
         setIsLoadingGeocoding(false);
       }
     }
-  }, []);
+    fetchCityData();
+  }, [lat, lng]);
 
   return (
     <form className={styles.form}>
