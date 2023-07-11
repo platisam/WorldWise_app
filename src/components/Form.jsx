@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "./Button";
 import BackButton from "./BackButton";
+import Message from "./Message";
 import { useUrlPosition } from "../hooks/useUrlPosition";
 
 export function convertToEmoji(countryCode) {
@@ -54,6 +55,8 @@ function Form() {
     }
     fetchCityData();
   }, [lat, lng]);
+
+  if (geocodingError) return <Message message={geocodingError} />;
 
   return (
     <form className={styles.form}>
