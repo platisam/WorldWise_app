@@ -11,12 +11,12 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const CityItem = ({ city }) => {
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
   const { cityName, date, emoji, id, position } = city;
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log("TEST");
+    deleteCity(id);
   };
 
   return (
